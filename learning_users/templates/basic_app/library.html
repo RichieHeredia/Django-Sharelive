@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- libreria css -->
+  <link rel="stylesheet" href="{% static "css/formstyles.css" %}">
+  <!-- google-fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+  <!-- libreria iconos -->
+  <link href="{% static "fontawesome-free-5.13.0-web\css\fontawesome.css" %}" rel="stylesheet">
+  <link href="{% static "fontawesome-free-5.13.0-web\css\brands.css" %}" rel="stylesheet">
+  <link href="{% static "fontawesome-free-5.13.0-web\css\solid.min.css" %}" rel="stylesheet">
+
+  <!-- libreria bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- librerias jquery, and js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Biblioteca</title>
+  <link rel="icon" href="{% static "sharelive.ico" %}">
+</head>
+
+<body>
+  <div class="sidenav">
+    <a href="{% url 'principal' %}" id="{% static "brand" %}"><img src="{% static "Images/sharelive.png"%}" alt="" width="40px"; height="40px" title="ShareLive";></a>
+    <hr>
+    <a href="#" class="s event" title="Standup Comedy"><i class="fas fa-theater-masks"></i></i></a>
+    <a href="#" class="g event" title="Ocio"><i class="fas fa-microphone-alt"></i></a>
+    <a href="#" class="c event" title="Conciertos"><i class="fas fa-music"></i></a>
+    <a href="#" class="m event" title="Conferencias"><i class="fas fa-users"></i></a>
+    <hr>
+    <a href="#" title="Sobre Nosotros"><i class="fas fa-heart"></i></i></a>
+    <a href="#" title="Historial"><i class="fas fa-clock"></i></a>
+  </div>
+
+  <!-- articles list -->
+  <div class="main" id="main">
+    <div class="description">
+      <h2 id="descrip">Escoge entre multiples categorias</h2>
+      <p id="pdes">En nuestra biblioteca encontaras el mejor contenido de todo lo que mas te gusta, explora nustras distintas galerias mientras que sigues disfrutando de tus expectaculos en VIVO.</p>
+    </div>
+    <div class="vid-list">
+      <div class="vid">
+          <a href="{% url 'reproductor' %}" method="post" action="{% url 'reproductor' %}"><img src="" alt="" id="img1"></a>
+        <div class="centrado" id="carta1">
+          <!-- #1 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img2"></a>
+        <div class="centrado" id="carta2">
+          <!-- #2 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img3"></a>
+        <div class="centrado" id="carta3">
+          <!-- #3 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img4"></a>
+        <div class="centrado" id="carta4">
+          <!-- #4 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img5"></a>
+        <div class="centrado" id="carta5">
+          <!-- #5 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img6"></a>
+        <div class="centrado" id="carta6">
+          <!-- #6 -->
+        </div>
+      </div>
+      <div class="vid">
+          <a href="{% url 'reproductor' %}"><img src="" alt="" id="img7"></a>
+        <div class="centrado" id="carta7">
+          <!-- #7 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img8"></a>
+        <div class="centrado" id="carta8">
+          <!-- #8 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img9"></a>
+        <div class="centrado" id="carta9">
+          <!-- #9 -->
+        </div>
+      </div>
+      <div class="vid">
+        <a href="{% url 'reproductor' %}"><img src="" alt="" id="img10"></a>
+        <div class="centrado" id="carta10">
+          <!-- #10 -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end articles list -->
+<!-- <script src="{% static "JavaScript\library.js" %}" charset="utf-8"></script> -->
+< <script type="text/javascript">
+//eventos de clic bliblioteca
+var numOfcategories = document.querySelectorAll(".event").length;
+//bg img
+var fondo = document.getElementById("main");
+//cards imgs
+var imag1 = document.getElementById("img1");
+var imag2 = document.getElementById("img2");
+var imag3 = document.getElementById("img3");
+var imag4 = document.getElementById("img4");
+var imag5 = document.getElementById("img5");
+var imag6 = document.getElementById("img6");
+var imag7 = document.getElementById("img7");
+var imag8 = document.getElementById("img8");
+var imag9 = document.getElementById("img9");
+var imag10 = document.getElementById("img10");
+//category description
+var des = document.getElementById("descrip");
+var pdes= document.getElementById("pdes");
+//number of cards
+var num1= document.getElementById("carta1");
+var num2= document.getElementById("carta2");
+var num3= document.getElementById("carta3");
+var num4= document.getElementById("carta4");
+var num5= document.getElementById("carta5");
+var num7= document.getElementById("carta7");
+var num6= document.getElementById("carta6");
+var num8= document.getElementById("carta8");
+var num9= document.getElementById("carta9");
+var num10= document.getElementById("carta10");
+//src video
+// var srcvid = document.getElementById("player");
+
+for (var i = 0; i < numOfcategories; i++) {
+  document.querySelectorAll(".event")[i].addEventListener("click", function() {
+
+    var itemTriggered = this.getAttribute("class")[0];
+    console.log(itemTriggered);
+    if (itemTriggered === "s") {
+      // cambio de fondo de pag
+      fondo.style.backgroundImage = "{% static 'url("Multimedia/cat1.jpg")' %}";
+      fondo.style.backgroundPosition = '0 0';
+      fondo.style.opacity = "0.9";
+      // cambio de caratulas
+      img1.src="{% static "Articles/1.jpg" %}";
+      num1.innerHTML="<strong>#1</strong>"
+      img2.src="{% static "Articles/2.jpg"%}" ;
+      num2.innerHTML="<strong>#2</strong>"
+      img3.src="{% static "Articles/3.jpg" %}";
+      num3.innerHTML="<strong>#3</strong>"
+      img4.src="{% static "Articles/4.jpg" %}";
+      num4.innerHTML="<strong>#4</strong>"
+      img5.src="{% static "Articles/5.jpg"%}";
+      num5.innerHTML="<strong>#5</strong>"
+      img6.src="{% static "Articles/6.jpg"%}";
+      num6.innerHTML="<strong>#6</strong>"
+      img7.src="{% static "Articles/7.jpg"%}";
+      num7.innerHTML="<strong>#7</strong>"
+      img8.src="{% static "Articles/8.png"%}";
+      num8.innerHTML="<strong>#8</strong>"
+      img9.src="{% static "Articles/9.jpg"%}";
+      num9.innerHTML="<strong>#9</strong>"
+      img10.src="{% static "Articles/10.jpg"%}";
+      num10.innerHTML="<strong>#10</strong>"
+      //cambio de descripción de categoria
+      des.innerHTML = "Standup Comedy";
+      pdes.innerHTML = "Sabemos que te encanta reírte y por eso hemos seleccionado los mejores shows y stand-up  en vivo y de lanzamiento del mundo";
+      //cambio src player
+      // srcvid.setAttribute("src","https://www.youtube.com/embed/xkWZhQ67Cq0");
+
+
+    } else if (itemTriggered === "g") {
+      // cambiode fondo de pag
+      fondo.style.backgroundImage = "{% static 'url("Multimedia/cat2.jpg")' %}";
+      fondo.style.backgroundPosition = '0 0';
+      fondo.style.opacity = "0.9";
+      // cambio de caratulas
+      img1.src="{% static "Articles/o1.jpg"%}";
+      img2.src="{% static "Articles/o2.jpg"%}";
+      img3.src="{% static "Articles/o3.jpg"%}";
+      img4.src="{% static "Articles/o4.jpg"%}";
+      img5.src="{% static "Articles/o5.jpg"%}";
+      img6.src="{% static "Articles/o6.jpg"%}";
+      img7.src="{% static "Articles/o7.jpg"%}";
+      img8.src="{% static "Articles/o8.jpg"%}";
+      img9.src="{% static "Articles/o9.jpg"%}";
+      img10.src="{% static "Articles/o10.jpg" %}" ;
+      //cambio de  %}"descripción de categoria
+      des.innerHTML="Hobbies";
+      pdes.innerHTML = "Tus pasatiempos favoritos hacen parte importante de tu vida por eso hemos seleccionado los mas impactantes para ti.";
+      // cambio src player
+      // srcvid.setAttribute("src","https://player.twitch.tv/?channel=playbattlegrounds&parent=www.example.com");
+    } else if (itemTriggered === "c") {
+        // cambiode fondo de pag
+      fondo.style.backgroundImage = "{% static 'url("Multimedia/cat3.jpg")' %}";
+      fondo.style.backgroundPosition = '0 0';
+      fondo.style.opacity = "0.9";
+      // cambio de caratulas
+      img1.src="{% static "Articles/g1.jpg" %}";
+      img2.src="{% static "Articles/g2.jpg" %}";
+      img3.src="{% static "Articles/g3.jpg" %}";
+      img4.src="{% static "Articles/g4.jpg" %}";
+      img5.src="{% static "Articles/g5.jpg" %}";
+      img6.src="{% static "Articles/g6.jpg" %}";
+      img7.src="{% static "Articles/g7.jpg" %}";
+      img8.src="{% static "Articles/g8.jpg" %}";
+      img9.src="{% static "Articles/g9.jpg" %}";
+      img10.src="{% static "Articles/g10.jpg" %}";
+      //cambio de descripción de categoria
+      des.innerHTML="Conciertos en vivo";
+      pdes.innerHTML = "Llena tu vida de buenas vibras y canta en compañía de tus artistas favoritos. Hemos escogido para ti los mejores exponentes de la música del Mudo…";
+      //cambio de src player
+      // srcvid.src = "https://player.twitch.tv/?channel=insomniac&parent=www.example.com";
+    } else if (itemTriggered === "m") {
+      // cambiode fondo de pag
+      fondo.style.backgroundImage = "{% static 'url("Multimedia/cat4.jpg")' %}";
+      fondo.style.backgroundPosition = '0 0';
+      fondo.style.opacity = "0.9";
+      // cambio de caratulas
+      img1.src="{% static "Articles/m1.jpg" %}" ;
+      img2.src="{% static "Articles/m2.jpg" %}" ;
+      img3.src="{% static "Articles/m3.jpg" %}" ;
+      img4.src="{% static "Articles/m4.jpg" %}" ;
+      img5.src="{% static "Articles/m5.jpg" %}" ;
+      img6.src="{% static "Articles/m6.png" %}" ;
+      img7.src="{% static "Articles/m7.jpg" %}" ;
+      img8.src="{% static "Articles/m8.jpg" %}" ;
+      img9.src="{% static "Articles/m9.jpg" %}" ;
+      img10.src="{% static "Articles/m10.jpeg" %}" ;
+      //cambio de descripción de categoria
+      des.innerHTML="Conferencias ,clases y cursos";
+      pdes.innerHTML = "En un mundo de constante cambio es importante que estemos actualizados y en búsqueda de nuestro crecimiento personal y físico.";
+      //cambio src player
+      // srcvid.src = "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmileniotelevision%2Fvideos%2F942788656139566%2F&show_text=0&width=560";
+
+    }
+  });
+}
+
+</script>
+</body>
+
+</html>

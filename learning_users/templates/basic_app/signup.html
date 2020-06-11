@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <!-- libreria css -->
+  <link rel="stylesheet" href="{% static "css/signupstyles.css" %}">
+  <!-- google-fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <!-- libreria bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- librerias jquery, and js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Inscripción</title>
+  <link rel="icon" href="sharelive.ico">
+</head>
+
+<body>
+  {% if registered %}
+    <h1> Thanks you for registering!</h1>
+    <div class="col-md-6 mb-3" id="signin">
+      <button class="btn btn-light"  type="button"><a href="{% url 'basic_app:user_login' %}">iniciar sesión ⮕</a></button>
+    </div>
+  {% else %}
+  <div class="main">
+  </div>
+  <div class="middle-container">
+    <h2>Sign Up</h2>
+    <br>
+    <form class="needs-validation" enctype="multipart/form-data" method="post">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p}}
+        <hr class="mb-4">
+        <label>
+          <input type="checkbox" checked="checked" name="rememder"> Aceptar <a href="https://www.wonder.legal/mx/modele/terminos-condiciones" target="_blank">terminos y condiciones</a>
+        </label>
+        <br>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <button class="btn btn-primary"  type="submit" onclick="document.getElementById('id01').style.display='block'" value="Register">Registrarse</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endif %}
+</body>
+
+</html>
