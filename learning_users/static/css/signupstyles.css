@@ -1,0 +1,33 @@
+.main{
+  width: 70%;
+  height: 100vh;
+  min-height: 480px;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, rgba(142,11,144,0.7) 20%, rgba(241,123,242,0.5) 80%), url(../Images/signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 1px solid white;
+  text-align: center;
+}
+.middle-container{
+  width: 30%;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  right: 0;
+  background-color: white;
+  padding: 20px;
+}
+
+.username{
+  margin-left: 0px!important;
+}
+#signin{
+  text-align: right;
+}
+#signin a{
+  text-decoration: none;
+  color: black;
+}
